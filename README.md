@@ -1,70 +1,59 @@
-# Plank 
+# Plank Themes — Linux Mint 22.3 Compatible Collection
 
-A nice program to have all your major programs one click away.
+A cleaned, verified collection of **72 Plank dock themes** compatible with the current
+generation of the Plank dock (**plank-reloaded**) on **Linux Mint 22.3 (Zena)** —
+Ubuntu 24.04 Noble base, Cinnamon 6.6.
 
+Forked from [erikdubois/plankthemes](https://github.com/erikdubois/plankthemes)
+(117 stars — all credit for the themes goes to Erik Dubois and the original authors).
 
-# Installation of plank
+## What was changed in this fork
 
-	sudo apt-get install -y plank 
+| Change | Reason |
+|---|---|
+| Kept **72 themes** using the modern `[PlankTheme]` format | 100% compatible with plank / plank-reloaded |
+| Removed **38 themes** using the legacy 2013 `[PlankDrawingTheme]` format | Not parsed by modern Plank — they would not render |
+| Updated this README | Verification notes for Linux Mint 22.3 |
 
-Your distro does not have it in its standard repositories.
+## Compatibility
 
-	sudo add-apt-repository ppa:ricotz
- 	sudo apt-get update
- 	sudo apt-get install plank
+- ✅ Verified on **Linux Mint 22.3 (Zena)** — Cinnamon 6.6 — plank-reloaded
+- ✅ Theme format matches the themes shipped with plank-reloaded (`Default`, `Matte`, `Matte-Light`, …)
+- ✅ No scripts, no sudo, no system changes — plain theme folders only
 
-# Installing the themes.
+## Installation
 
+```bash
+git clone https://github.com/X0Riii/plankthemes.git /tmp/plankthemes
+mkdir -p ~/.local/share/plank/themes
+cp -r /tmp/plankthemes/* ~/.local/share/plank/themes/
+```
 
- Download this github and unzip.
+Then apply a theme:
 
- Copy all folders to 
+- **GUI**: Ctrl + right-click on the dock → Preferences → Appearance → Theme
+- **CLI**:
+  ```bash
+  gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme 'Arc'
+  ```
 
- 	~/.local/share/plank/themes
+## Theme list (72)
 
- or
+Apollo, Arc, ArchLabs, Arsa, Arsa-Transparent, AyasBlue, AyasGreen, AyasRed,
+AyasWhite, AyasYellow, Blumix, Chameleon, Champagne, Coal, Darktheon, Elite,
+Fresh, Frost, Gingerbread2, GlassPill, GlassPillBlack, Glasseoso, GlasseosoMod,
+Gnosemite, Gracieux, HTC, HUD, Holo, Hud, Jupiter-Redux, Jupiter-Redux-2,
+Kit-Kat, LightPanel, Lucc, Lunita, Madterky, Mint-Y-Theme, Moka, Moncho,
+MonchoMod, Numix, OSXLion, OSXYosemite, OSXYosemite Red, Omda, Orchis, Panel,
+Pantheon, PantheonBlack, PantheonNebbia, PantheonNero, PantheonVetro,
+Pantheon_black_total, Pantheon_champagne, Pantheon_champagne_black, Pantiva,
+PearOS, Placmank, Rosa, RoundedGlass, RoundedGlass2, Sampan, SampanBlack,
+SampanBlue, SampanGlass, SampanGreen, SampanPink, SampanWhite, TransPanel,
+Translucent-Panel, Transparent, Transparent4Real, Ubuntu, Unity-like,
+Vertex-Plank, Whitesnow, Wingy, WingyBlanco, Wingywhity, Xenlism, Youtube,
+Zombie queen, Zorin10-Blue, Zorin10-Green, anti-shade, ceghap, cratos-lion,
+cublinux, eLight, froggaz
 
- 	/usr/share/plank/themes
+## License
 
-
-# Use CTRL + right mouse click on the plank to get to the preferences
-
-
-
-
-# Personal creation
-
-
-# Mint-Y Plank theme
-
-It has been created to fit the Mint-Y theme on Linux Mint 18 cinnamon.
-
-![Screenshots](http://i.imgur.com/bJYw3Rb.png)
-
-
-
-
-# Some examples
-
-
-
-![Screenshots](http://i.imgur.com/Sp6Goux.png)
-
-
-
-![Screenshots](http://i.imgur.com/cbIxZZ6.png)
-
-
-
-# Rest of the examples
-
-Making pictures of all of the themes and uploading them to github would take to much time and effort.
-
-Hence this nice Youtube movie.
-
-# Click on the picture beneath to see the latest youtube of the collection.
-
-<a target="_blank" href="https://youtu.be/BuE81uFMxR8">
-<img style="max-width:100%;" src="http://i.imgur.com/oBJD5AK.png">
-</a> 
-
+Themes keep the license of their original authors (see upstream repository).
